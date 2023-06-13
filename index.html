@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <form class="form" onsubmit="handleSubmit(event)">
+            <h1>Fill Details</h1>
+            <input name="name" id="name" type="text" placeholder="Enter Your Name">
+            <input id="email" type="text" placeholder="Enter your Email">
+            <textarea id="message" name="" id="" cols="30" rows="10" placeholder="Message here...."></textarea>
+            <!-- <button disabled type="Submit" id="submit-btn" >Submit</button>
+             -->
+             <input id="submit-btn"  type="submit" value="Submit">
+
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+    </div>
+    <div class="fallback remove">
+            <p>Please Fill all the fields..</p>
+            <button onclick="removefallback()"> OK</button>
+    </div>
+
+    <div class="succesMessge inactive">
+            <p>Successfull Store data</p>
+            <button onclick="succesOK()">OK</button>
+    </div>
+    <div class="updatemessage inactive">
+        <p>Successfull update data</p>
+        <button onclick="updateOk()">OK</button>
+</div>
+
+<div class="deletemessage inactive">
+    <p>Successfull Delete data</p>
+    <button onclick="deleteOk()">OK</button>
+</div>
+
+    <div class="updateDiv inactive">
+        <form class="form" onsubmit="handleUpdate(event)">
+                <h1>Update data</h1>
+            <input name="updateName" id="updateName" type="text" placeholder="Enter Your Name">
+            <input id="updateEmail" type="text" placeholder="Enter your Email">
+            <textarea id="updateMessage" name="" id="" cols="30" rows="10" placeholder="Message here...."></textarea>
+             <input id="submit-btn"  type="submit" value="Submit">
+
+        </form>
+    </div>
+
+</body>
+</html>
+<script src="index.js"></script>
